@@ -1,0 +1,108 @@
+/* .data-table {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+} */
+
+.full-width {
+    width: 100%
+}
+
+.table-header {
+    background-color: navy;
+    color: #ffffff;
+}
+
+.mobile-table {
+    padding: 0px 15px 15px 15px;
+}
+
+.header-height {
+    height: 60px;
+}
+
+.mobile-header-height {
+    height: 40px;
+}
+
+.body-height {
+    height: 60px;
+}
+
+.mobile-body-height {
+    height: 50px;
+}
+
+th {
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-left: 1px solid #000000;
+}
+
+td {
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-left: 1px solid #000000;
+}
+
+.mobile th {
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+}
+
+.mobile td {
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+}
+
+.right-border {
+    border-right: 1px solid #000000;
+}
+
+.left-border {
+    border-left: 1px solid #000000;
+}
+
+.italic-font {
+    font-style: italic;
+}
+
+.center-text-align {
+    text-align: center;
+    width: 12.5%;
+    font-size: 13px;
+}
+
+.empty-data {
+    text-align: center;
+    padding: 20px;
+    background-color: grey;
+    /* margin-left: 20px; */
+    /* margin-right: 20px; */
+    font-style: italic;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 15px;
+}
+
+.mobile-empty-data {
+    text-align: center;
+    padding: 10px;
+    background-color: grey;
+    font-style: italic;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 12px;
+}
+
+.countryFlag {
+    width: 80px;
+    height: 45px;
+    border: 1px solid #000000;
+}

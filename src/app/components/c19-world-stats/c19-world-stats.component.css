@@ -1,0 +1,230 @@
+.header {
+    height: 50px;
+    background-color: navy;
+    font-weight: bold;
+    /* font-size: 22px; */
+    text-align: center;
+    color: #ffffff;
+}
+
+.side-gap {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 22px;
+}
+
+.mobile-side-gap {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 18px;
+}
+
+.top-padding {
+    padding-top: 8px;
+}
+
+.c19Image {
+    width: 100px;
+    height: 50px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+.footer {
+    height: 50px;
+    background-color: navy;
+    font-weight: bold;
+    font-size: 15px;
+    position: fixed;
+    bottom: 1px;
+    padding-top: 5px;
+    width: 100%;
+    color: #ffffff;
+    z-index: 1;
+    text-align: center;
+}
+
+.mobile-footer {
+    height: 50px;
+    background-color: navy;
+    font-weight: bold;
+    font-size: 15px;
+    /* position: fixed; */
+    bottom: 1px;
+    padding-top: 5px;
+    width: 100%;
+    color: #ffffff;
+    /* z-index: 1; */
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: navy;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: white;
+    /* border-radius: 10px; */
+}
+
+.mobile-main-content {
+    background-color: navy;
+    color: white;
+}
+
+.main-title {
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.c19-mobile-data {
+    font-style: italic;
+    text-align: center;
+}
+
+.small-gap-bottom {
+    padding-bottom: 10px;
+}
+
+.all-data-info {
+    background-color: #ffbf00;
+    padding: 15px 30px 30px 30px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: grey;
+    overflow-x: hidden;
+    padding-top: 20px;
+    margin-top: 50px;
+}
+
+.center-text {
+    text-align: center;
+    font-size: 14px;
+}
+
+.each-info-field {
+    background-color: navy;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-style: italic;
+    /* transition: transform 1s ease-in-out; */
+    /* backface-visibility: hidden; */
+}
+
+.bold-font {
+    font-weight: bold;
+}
+
+.second-column,
+.third-column {
+    margin-left: 250px;
+}
+
+.top-margin-10 {
+    margin-top: 10px;
+}
+
+.select-button {
+    padding: 20px 20px 0px 20px
+}
+
+.margin-top15 {
+    margin-top: 15px;
+}
+
+.country-dropdown {
+    padding-top: 20px;
+    width: 42%;
+    margin-left: 20px
+}
+
+.selection {
+    background-color: navy;
+    color: #ffffff;
+    width: 100%;
+}
+
+.top-margin-10 {
+    margin-top: 10px;
+}
+
+.btn {
+    width: 100%;
+    background-color: lightskyblue;
+    /* background-image: linear-gradient(to right, black, gold); */
+    font-weight: 600;
+    color: #000000;
+    font-size: 14px;
+}
+
+.mobile-btn {
+    width: 100%;
+    background-color: burlywood;
+    /* background-image: linear-gradient(to right, black, gold); */
+    font-weight: 600;
+    color: #000000;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background-color: burlywood;
+    color: #000000;
+}
+
+.first-title-div,
+.second-title-div {
+    padding-bottom: 10px;
+    font-size: 18px;
+    color: navy;
+    font-weight: 700;
+    border-radius: 5px;
+    background-color: lightblue;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.mobile-first-title-div {
+    font-size: 18px;
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.main-mobile-content {
+    background-color: grey;
+    margin-top: 10px;
+}
+
+.bottom-margin-10 {
+    margin-bottom: 10px;
+}
+
+.left-padding-25 {
+    padding-left: 25px;
+}
+
+.right-padding-25 {
+    padding-right: 25px;
+}
+
+.bottom-padding-55 {
+    padding-bottom: 55px;
+}

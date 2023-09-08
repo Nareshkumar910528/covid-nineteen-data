@@ -1,0 +1,257 @@
+.header {
+    height: 50px;
+    background-color: navy;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    color: #ffffff
+}
+
+.side-gap {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.top-padding {
+    padding-top: 8px;
+}
+
+.c19Image {
+    width: 100px;
+    height: 50px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+.footer {
+    height: 50px;
+    background-color: navy;
+    font-weight: bold;
+    font-size: 15px;
+    position: fixed;
+    bottom: 1px;
+    padding-top: 5px;
+    width: 100%;
+    color: #ffffff;
+    z-index: 1;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: navy;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: white;
+    /* border-radius: 10px; */
+}
+
+.all-data-info {
+    background-color: #ffbf00;
+    padding: 15px 30px 30px 30px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: grey;
+    overflow-x: hidden;
+    padding-top: 20px;
+    margin-top: 50px;
+}
+
+.center-text {
+    text-align: center;
+    font-size: 14px;
+}
+
+.each-info-field {
+    background-color: navy;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-style: italic;
+    /* transition: transform 1s ease-in-out; */
+    /* backface-visibility: hidden; */
+}
+
+.bold-font {
+    font-weight: bold;
+}
+
+.second-column,
+.third-column {
+    margin-left: 250px;
+}
+
+.top-margin-10 {
+    margin-top: 10px;
+}
+
+.select-button {
+    padding: 20px 20px 0px 20px
+}
+
+.margin-top15 {
+    margin-top: 15px;
+}
+
+.country-dropdown {
+    padding-top: 20px;
+    width: 42%;
+    margin-left: 20px
+}
+
+.selection {
+    background-color: navy;
+    color: #ffffff;
+    width: 100%;
+}
+
+.top-margin-10 {
+    margin-top: 10px;
+}
+
+.btn {
+    width: 100%;
+    background-color: lightskyblue;
+    /* background-image: linear-gradient(to right, black, gold); */
+    font-weight: 600;
+    color: #000000;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background-color: burlywood;
+    color: #000000;
+}
+
+.first-title-div,
+.second-title-div {
+    padding-bottom: 10px;
+    font-size: 18px;
+    color: navy;
+    font-weight: 700;
+    border-radius: 5px;
+    background-color: lightblue;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+/* .data-table {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+} */
+
+.full-width {
+    width: 100%
+}
+
+.table-header {
+    background-color: navy;
+    color: #ffffff;
+}
+
+.header-height {
+    height: 60px;
+}
+
+.body-height {
+    height: 60px;
+}
+
+th {
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-left: 1px solid #000000;
+}
+
+td {
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-left: 1px solid #000000;
+}
+
+.right-border {
+    border-right: 1px solid #000000;
+}
+
+.left-border {
+    border-left: 1px solid #000000;
+}
+
+.italic-font {
+    font-style: italic;
+}
+
+.center-text-align {
+    text-align: center;
+    width: 12.5%;
+    font-size: 13px;
+}
+
+.empty-data {
+    text-align: center;
+    padding: 20px;
+    background-color: grey;
+    /* margin-left: 20px; */
+    /* margin-right: 20px; */
+    font-style: italic;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 15px;
+}
+
+.countryFlag {
+    width: 90px;
+    height: 50px;
+    border: 1px solid #000000;
+}
+
+.mobile-table {
+    padding: 0px 15px 15px 15px;
+}
+
+.padding-except-top {
+    padding: 0px 15px 10px 15px;
+}
+
+.mobile-header-height {
+    height: 40px;
+}
+
+.mobile th {
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+}
+
+.mobile td {
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+}
+
+.mobile-empty-data {
+    text-align: center;
+    padding: 10px;
+    background-color: grey;
+    font-style: italic;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 12px;
+}

@@ -1,0 +1,181 @@
+<div class="c19-stats">
+
+    <div class="header">
+        <!-- <img [src]="c19Image" class="c19Image"> -->
+        <div class="top-padding">
+            <span class="side-gap" *ngIf="isMobile == false">COVID-19 & VACCINATION STATISTICS</span>
+            <span class="mobile-side-gap" *ngIf="isMobile == true">COVID-19 & VACCINATION STATISTICS</span>
+        </div>
+        <!-- <img [src]="c19Image" class="c19Image"> -->
+    </div>
+
+    <div class="sidebar" *ngIf="isMobile == false">
+        <div class="title">
+            <span>Covid-19 Statistics as of {{currentDate | date: 'dd MMMM yyyy'}}, {{currentDate | date: 'hh:mm:ss a' | uppercase}}</span>
+        </div>
+
+        <div class="each-info-field">
+            <div class="center-text">
+                <span class="bold-font">Active Cases - {{activeCases}}</span><br>
+            </div>
+        </div>
+        <div class="each-info-field">
+            <div class="center-text">
+                <span class="bold-font">Affected Countries - {{affectedCountries}}</span><br>
+            </div>
+        </div>
+        <div class="each-info-field">
+            <div class="center-text">
+                <span class="bold-font">Critical Cases - {{totalCriticalCases}}</span><br>
+            </div>
+        </div>
+        <div class="each-info-field">
+            <div class="center-text">
+                <span class="bold-font">Total Cases - {{totalCases}}</span><br>
+            </div>
+        </div>
+        <div class="each-info-field">
+            <div class="center-text">
+                <span class="bold-font">Total Death - {{totalDeath}}</span><br>
+            </div>
+        </div>
+        <div class="each-info-field">
+            <div class="center-text">
+                <span class="bold-font">Recovered - {{totalRecovered}}</span><br>
+            </div>
+        </div>
+        <div class="each-info-field">
+            <div class="center-text">
+                <span class="bold-font">Total Test Taken - {{totalCompletedTest}}</span><br>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="isMobile == true">
+        <div class="mobile-main-content bottom-margin-10">
+            <div class="main-title">
+                <span>Covid-19 Statistics as of {{currentDate | date: 'dd MMMM yyyy'}}, {{currentDate | date: 'hh:mm:ss a' | uppercase}}</span>
+            </div>
+
+            <div class="c19-mobile-data">
+                <div class="row small-gap-bottom">
+                    <div class="col-6 col-sm-6">
+                        <span class="bold-font">Active Cases - {{activeCases}}</span>
+                    </div>
+                    <div class="col-6 col-sm-6">
+                        <span class="bold-font">Affected Countries - {{affectedCountries}}</span>
+                    </div>
+                </div>
+                <div class="row small-gap-bottom">
+                    <div class="col-6 col-sm-6">
+                        <span class="bold-font">Critical Cases - {{totalCriticalCases}}</span>
+                    </div>
+                    <div class="col-6 col-sm-6">
+                        <span class="bold-font">Total Cases - {{totalCases}}</span>
+                    </div>
+                </div>
+                <div class="row small-gap-bottom">
+                    <div class="col-6 col-sm-6">
+                        <span class="bold-font">Total Death - {{totalDeath}}</span>
+                    </div>
+                    <div class="col-6 col-sm-6">
+                        <span class="bold-font">Recovered - {{totalRecovered}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="second-column" *ngIf="isMobile == false">
+        <div class="row select-button">
+            <div class="first-title-div top-padding">
+                <span>Cases Details</span>
+            </div>
+            <div class="col-md-3">
+                <select class="form-select selection" aria-label="Default select example" (change)="onChangeCountryName($event)">
+                    <option selected hidden>Select a Country</option>
+                    <option *ngFor="let names of countryName">{{names}}</option>
+                </select>
+                <div class="top-margin-10">
+                    <button class="btn" (click)="viewStats()" [disabled]="!validation()">Click to view Covid-19 statistics for the selected country</button>
+                </div>
+            </div>
+            <!-- 
+            <div class="col-md-3">
+                <select class="selectpicker selection" data-live-search="true" (change)="onChangeCountryName($event)">
+                    <option value="none" selected disabled hidden>Select a Country</option>
+                    <option *ngFor="let names of randomTestCountry">{{names}}</option>
+                </select>
+                <div class="top-margin-10">
+                    <button class="btn" (click)="viewStats()" [disabled]="!validation()">Click to view Covid-19 statistics for the selected country</button>
+                </div>
+            </div> -->
+
+            <div class="col-md-9">
+                <app-c19-country-stats [country-stats]="statisticsByCountry" [country-flag]="countryFlag"></app-c19-country-stats>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="isMobile == true">
+        <div class="mobile-main-content bottom-margin-10">
+            <div class="mobile-first-title-div top-padding">
+                <span>Cases Details</span>
+            </div>
+            <div class="row bottom-margin-10">
+                <div class="col-7 col-sm-7 left-padding-25">
+                    <select class="form-select selection" aria-label="Default select example" (change)="onChangeCountryName($event)">
+                        <option selected hidden>Select a Country</option>
+                        <option *ngFor="let names of countryName">{{names}}</option>
+                    </select>
+                    <!-- <select class="selectpicker selection" data-live-search="true" (change)="onChangeCountryName($event)">
+                        <option value="none" selected disabled hidden>Select a Country</option>
+                        <option *ngFor="let names of randomTestCountry">{{names}}</option>
+                    </select> -->
+                </div>
+                <div class="col-5 col-sm-5 right-padding-25">
+                    <button class="btn" (click)="viewStats()" [disabled]="!validation()">View statistics</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12">
+                    <app-c19-country-stats [country-stats]="statisticsByCountry" [country-flag]="countryFlag"></app-c19-country-stats>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="third-column top-margin-10" *ngIf="isMobile == false">
+        <div class="row select-button">
+            <div class="second-title-div top-padding">
+                <span>Vaccination Details</span>
+            </div>
+            <div>
+                <app-vaccination-details></app-vaccination-details>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="isMobile == true">
+        <div class="mobile-main-content bottom-margin-10">
+            <div class="mobile-first-title-div top-padding">
+                <span>Vaccination Details</span>
+            </div>
+            <div>
+                <app-vaccination-details></app-vaccination-details>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer" *ngIf="isMobile == false">
+        <span>Stay safe. Thank you.</span><br>
+        <span>By: Nareshkumar Sundrasegaran</span>
+    </div>
+
+    <div class="mobile-footer" *ngIf="isMobile == true">
+        <span>Stay safe. Thank you.</span><br>
+        <span>By: Nareshkumar Sundrasegaran</span>
+    </div>
+
+</div>

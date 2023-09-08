@@ -1,0 +1,131 @@
+<div *ngIf="isMobile == false">
+    <div class="row">
+        <div class="col-md-3">
+            <select class="form-select selection" aria-label="Default select example" (change)="onSelectCountryName($event)">
+                <option selected hidden>Select a Country</option>
+                <option *ngFor="let names of countryName">{{names}}</option>
+            </select>
+            <div class="top-margin-10">
+                <button class="btn" (click)="viewVaccinationData()" [disabled]="!validation()">Click to view Covid-19 vaccination statistics for the selected country</button>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <div class="data-table">
+                <table class="full-width">
+                    <thead class="table-header">
+                        <tr class="header-height">
+                            <th class="center-text-align left-border">Country</th>
+                            <!-- <th class="center-text-align">Date</th> -->
+                            <th class="center-text-align">Total Vaccinated Count</th>
+                            <th class="center-text-align">Total Vaccinated Count Per Hundred</th>
+                            <th class="center-text-align">Daily Vaccinated Count</th>
+                            <th class="center-text-align">Daily Vaccinated Count Per Million</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngIf="vaccData.length >= 1">
+                        <tr class="body-height" *ngFor="let data of vaccData">
+                            <td class="center-text-align left-border">
+                                <div>
+                                    <img class="countryFlag" src={{countryFlag}}>
+                                </div>
+                            </td>
+                            <!-- <td class="center-text-align">
+                                <div>
+                                    <span class="italic-font">{{data.date | date: 'dd MMMM yyyy'}}</span>
+                                </div>
+                            </td> -->
+                            <td class="center-text-align">
+                                <div>
+                                    <span class="italic-font">{{data.total}}</span>
+                                </div>
+                            </td>
+                            <td class="center-text-align">
+                                <div>
+                                    <span class="italic-font">{{data.totalPerHundred}}</span>
+                                </div>
+                            </td>
+                            <td class="center-text-align">
+                                <div>
+                                    <span class="italic-font">{{data.daily}}</span>
+                                </div>
+                            </td>
+                            <td class="center-text-align">
+                                <div>
+                                    <span class="italic-font">{{data.dailyPerMillion}}</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="empty-data" *ngIf="vaccData.length == 0">
+                <span>Data will be shown once user has selected the country from the dropdown listing.</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="isMobile == true">
+    <div class="row padding-except-top">
+        <!-- <div class="col-7 col-sm-7 left-padding-25">
+            <select class="form-select selection" aria-label="Default select example" (change)="onSelectCountryName($event)">
+                <option selected hidden>Select a Country</option>
+                <option *ngFor="let names of countryName">{{names}}</option>
+            </select>
+        </div> -->
+
+        <div class="col-7 col-sm-7 left-padding-25">
+            <select class="form-select selection" aria-label="Default select example" (change)="onSelectCountryName($event)">
+                <option selected hidden>Select a Country</option>
+                <option *ngFor="let names of countryName">{{names}}</option>
+            </select>
+        </div>
+
+        <div class="col-5 col-sm-5 right-padding-25">
+            <button class="btn" (click)="viewVaccinationData()" [disabled]="!validation()">View statistics</button>
+        </div>
+    </div>
+    <div class="mobile-table">
+        <table class="full-width">
+            <thead class="table-header">
+                <tr class="mobile-header-height mobile">
+                    <th class="center-text-align left-border">Country</th>
+                    <!-- <th class="center-text-align">Date</th> -->
+                    <th class="center-text-align">Total Vaccinated Count</th>
+                    <th class="center-text-align">Daily Vaccinated Count</th>
+                </tr>
+            </thead>
+            <tbody *ngIf="vaccData.length >= 1">
+                <tr class="mobile-body-height mobile" *ngFor="let data of vaccData">
+                    <td class="center-text-align left-border">
+                        <div>
+                            <img class="countryFlag" src={{countryFlag}}>
+                        </div>
+                    </td>
+                    <!-- <td class="center-text-align">
+                        <div>
+                            <span class="italic-font">{{data.date | date: 'dd MMMM yyyy'}}</span>
+                        </div>
+                    </td> -->
+                    <td class="center-text-align">
+                        <div>
+                            <span class="italic-font">{{data.total}}</span>
+                        </div>
+                    </td>
+                    <td class="center-text-align">
+                        <div>
+                            <span class="italic-font">{{data.daily}}</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="mobile-empty-data" *ngIf="vaccData.length == 0">
+            <span>Data will be shown once user has selected the country from the dropdown listing.</span>
+        </div>
+    </div>
+
+</div>

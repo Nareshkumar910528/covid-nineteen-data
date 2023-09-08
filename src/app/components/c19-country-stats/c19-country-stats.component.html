@@ -1,0 +1,113 @@
+<div *ngIf="isMobile == false">
+    <div class="data-table">
+        <table class="full-width">
+            <thead class="table-header">
+                <tr class="header-height">
+                    <th class="center-text-align left-border">Country</th>
+                    <th class="center-text-align">Total Population</th>
+                    <th class="center-text-align">Test Completed</th>
+                    <th class="center-text-align">Active Cases</th>
+                    <th class="center-text-align">Total Cases</th>
+                    <th class="center-text-align">Total Deaths</th>
+                    <th class="center-text-align">Total Recovered</th>
+                    <th class="center-text-align right-border">Critical Patients</th>
+                </tr>
+            </thead>
+            <tbody *ngIf="countryStats.length == 1">
+                <tr class="body-height" *ngFor="let data of countryStats">
+                    <td class="center-text-align left-border">
+                        <div>
+                            <img class="countryFlag" src={{countryFlag}}>
+                        </div>
+                    </td>
+                    <td class="center-text-align">
+                        <div>
+                            <span class="italic-font">{{data.population}}</span>
+                        </div>
+                    </td>
+                    <td class="center-text-align">
+                        <div>
+                            <span class="italic-font">{{data.tests}}</span>
+                        </div>
+                    </td>
+                    <td class="center-text-align">
+                        <div>
+                            <span class="italic-font">{{data.active}}</span>
+                        </div>
+                    </td>
+                    <td class="center-text-align">
+                        <div>
+                            <span class="italic-font">{{data.cases}}</span>
+                        </div>
+                    </td>
+                    <td class="center-text-align">
+                        <div>
+                            <span class="italic-font">{{data.deaths}}</span>
+                        </div>
+                    </td>
+                    <td class="center-text-align">
+                        <div>
+                            <span class="italic-font">{{data.recovered}}</span>
+                        </div>
+                    </td>
+                    <td class="center-text-align right-border">
+                        <div>
+                            <span class="italic-font">{{data.critical}}</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="empty-data" *ngIf="countryStats.length == 0">
+        <span>Data will be shown once user has selected the country from the dropdown listing.</span>
+    </div>
+</div>
+
+<div *ngIf="isMobile == true" class="mobile-table">
+    <table class="full-width">
+        <thead class="table-header">
+            <tr class="mobile-header-height mobile">
+                <th class="center-text-align left-border">Country</th>
+                <th class="center-text-align">Active Cases</th>
+                <th class="center-text-align">Total Cases</th>
+                <th class="center-text-align">Total Deaths</th>
+                <th class="center-text-align">Total Recovered</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="countryStats.length == 1">
+            <tr class="mobile-body-height mobile" *ngFor="let data of countryStats">
+                <td class="center-text-align left-border">
+                    <div>
+                        <img class="countryFlag" src={{countryFlag}}>
+                    </div>
+                </td>
+                <td class="center-text-align">
+                    <div>
+                        <span class="italic-font">{{data.active}}</span>
+                    </div>
+                </td>
+                <td class="center-text-align">
+                    <div>
+                        <span class="italic-font">{{data.cases}}</span>
+                    </div>
+                </td>
+                <td class="center-text-align">
+                    <div>
+                        <span class="italic-font">{{data.deaths}}</span>
+                    </div>
+                </td>
+                <td class="center-text-align">
+                    <div>
+                        <span class="italic-font">{{data.recovered}}</span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="mobile-empty-data" *ngIf="countryStats.length == 0">
+        <span>Data will be shown once user has selected the country from the dropdown listing.</span>
+    </div>
+</div>
