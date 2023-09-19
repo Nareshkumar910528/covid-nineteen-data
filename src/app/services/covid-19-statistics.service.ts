@@ -8,11 +8,11 @@ import { Observable } from 'rxjs';
 
 export class Covid19StatisticsService {
     baseURL: string = "https://disease.sh/v3/covid-19";
-    baseVaccineURL: string = "https://disease.sh/v3/covid-19/vaccine/coverage/countries/"
+    baseVaccineURL: string = "https://disease.sh/v3/covid-19/vaccine/coverage/countries/";
 
     COUNTRY_DETAIL: string = 'https://countriesnow.space/api/v0.1/countries/states';
 
-    COUNTRY_DATA: string = '../assets/mock-countries.json'
+    COUNTRY_DATA: string = '../assets/mock-countries.json';
 
     constructor(private http: HttpClient) { }
 
